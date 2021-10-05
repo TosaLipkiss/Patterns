@@ -21,6 +21,8 @@ public class ObjectPooler : MonoBehaviour
     }
 
     public List<Pool> pools;
+
+    //
     public Dictionary<string, Queue<GameObject>> poolDictionary;
 
     void Start()
@@ -61,6 +63,13 @@ public class ObjectPooler : MonoBehaviour
         {
             pooledObj.OnObjectSpawn();
         }
+
+/*        IHi hiObj = objectToSpawn.GetComponent<IHi>();
+
+        if (pooledObj != null)
+        {
+            hiObj.SayHi();
+        }*/
 
         poolDictionary[tag].Enqueue(objectToSpawn);
 

@@ -14,6 +14,8 @@ public class GameEvent : MonoBehaviour
         current = this;
     }
 
+
+    //de här e event
     public event OpenDoorway onOpen;
 
     public void DoorwayTriggerEnter()

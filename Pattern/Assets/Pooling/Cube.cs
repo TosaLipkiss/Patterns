@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cube : MonoBehaviour, IPooledObject
+public class Cube : MonoBehaviour, IPooledObject, IHi
 {
     public float upForce = 1f;
     public float sideForce = 1f;
@@ -16,5 +16,10 @@ public class Cube : MonoBehaviour, IPooledObject
         Vector3 force = new Vector3(xForce, yForce, zForce);
 
         GetComponent<Rigidbody>().velocity = force;
+    }
+
+    public void SayHi()
+    {
+        Debug.Log("HI");
     }
 }
