@@ -15,9 +15,23 @@ public class DoorController : MonoBehaviour
         doorOpen = Quaternion.Euler(0, -90, 0);
         doorClosed = transform.rotation;
 
-        GameEvent.current.onOpen += OnDoorwayOpen;
+        //steg 3
+        //här subrscribar vi till eventen on open. Gör denna funktionen på eventet onOpen
+        TriggerArea.onOpen += OnDoorwayOpen;
+
+
+
+        //EXEMPEL
+/*        TriggerArea.OnGoal += Fireworks;
+        TriggerArea.OnGoal += AudienceSound;
+        TriggerArea.OnGoal += AddScore;
+
+        TriggerArea.Victory += Fireworks;
+        TriggerArea.Victory += AudienceSound;*/
     }
 
+
+    //Det här e då funktionen som vi lägger till
     public void OnDoorwayOpen()
     {
         Debug.Log("OpenDoor");

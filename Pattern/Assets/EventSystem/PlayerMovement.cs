@@ -6,6 +6,11 @@ public class PlayerMovement : MonoBehaviour
 {
     float speed = 5.0f;
 
+    private void Start()
+    {
+        TriggerArea.onOpen += Yippie;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -15,5 +20,10 @@ public class PlayerMovement : MonoBehaviour
 
             transform.Translate(new Vector3(horizontal, 0, vertical) * (speed * Time.deltaTime));
         }
+    }
+
+    void Yippie()
+    {
+        Debug.Log("Yippie");
     }
 }
