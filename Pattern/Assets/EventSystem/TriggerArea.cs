@@ -4,6 +4,8 @@ using UnityEngine;
 
 //deklarer en funktion som tar in noll parametrar
 //Delegate är instruktioner
+
+//Funktionspekare
 public delegate void OpenDoorway();
 
 public class TriggerArea : MonoBehaviour
