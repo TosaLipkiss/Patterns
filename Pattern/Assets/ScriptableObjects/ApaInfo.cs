@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/ApaInfo", order = 1)]
 public class ApaInfo : ScriptableObject
 {
-    public string[] animals;
+    public string[] animalSpecies;
     public string[] maleNames;
     public string[] femaleNames;
     public string[] genders;

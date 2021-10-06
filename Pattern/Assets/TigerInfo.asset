@@ -10,11 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da4adf2ad665fb04c93f561bbc17586a, type: 3}
-  m_Name: CatInfo
+  m_Name: TigerInfo
   m_EditorClassIdentifier: 
-  animals: []
-  maleNames: []
-  femaleNames: []
-  genders: []
+  animalSpecies: Tiger
+  maleNames:
+  - Tim
+  - Ted
+  - Teodore
+  - Tony
+  - Tage
+  femaleNames:
+  - Tanja
+  - Tess
+  - Therese
+  - Tilda
+  - Tora
+  genders:
+  - Male
+  - female
   startAge: 0
-  sprite: 
+  maxAge: 16
+  sprite: {fileID: 21300000, guid: 39f18141000a3ab4cb316c4c567e98e6, type: 3}

@@ -247,7 +247,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1c96b0466af254b98ead5c31ae782f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalaInfo: {fileID: 11400000, guid: e2e730cb2d32a5a418c0f41f65d4b397, type: 2}
+  apaInfo: {fileID: 11400000, guid: 46fa1777e3ab86f4b8715d4224476997, type: 2}
+  tigerInfo: {fileID: 11400000, guid: e27a5c7f0f234014e816054cc425249c, type: 2}
+  zebraInfo: {fileID: 11400000, guid: 463e8310751c8024a8e43cc5b50e9070, type: 2}
 --- !u!4 &551946188
 Transform:
   m_ObjectHideFlags: 0

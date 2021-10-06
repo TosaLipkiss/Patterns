@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public AnimalInfo animalaInfo;
+    public AnimalInfo apaInfo;
+    public AnimalInfo tigerInfo;
+    public AnimalInfo zebraInfo;
 
     private void Update()
     {
@@ -20,72 +22,89 @@ public class Spawner : MonoBehaviour
     {
         switch (randomNumber)
         {
+            //0 Spawn Tiger
             case 0:
                 {
-                    GameObject apaObject = new GameObject();
-                    Tiger tiger = apaObject.AddComponent<Tiger>();
-
-                    tiger.animal = animalaInfo.animals[0];
+                    GameObject tigerObject = new GameObject();
+                    Tiger tiger = tigerObject.AddComponent<Tiger>();
 
                     if (randomGender == 0)
                     {
-                        tiger.gender = animalaInfo.genders[randomGender];
-                        tiger.name = animalaInfo.maleNames[Random.Range(0, 3)];
+                        tiger.gender = tigerInfo.genders[randomGender];
+                        tiger.name = tigerInfo.maleNames[Random.Range(0, 5)];
                     }
 
                     else if (randomGender == 1)
                     {
-                        tiger.gender = animalaInfo.genders[randomGender];
-                        tiger.name = animalaInfo.femaleNames[Random.Range(0, 3)];
+                        tiger.gender = tigerInfo.genders[randomGender];
+                        tiger.name = tigerInfo.femaleNames[Random.Range(0, 5)];
                     }
 
-                    tiger.age = animalaInfo.startAge;
+                    SpriteRenderer spriteRenderer = tiger.gameObject.AddComponent<SpriteRenderer>();
+                    tiger.sprite = tigerInfo.sprite;
+                    spriteRenderer.sprite = tiger.sprite;
+
+                    tiger.species = tigerInfo.animalSpecies;
+                    tiger.maxAge = tigerInfo.maxAge;
+                    tiger.age = tigerInfo.startAge;
                     break;
                 }
 
+            //1 Spawn zebra
             case 1:
                 {
-                    GameObject apaObject = new GameObject();
-                    Zebra zebra = apaObject.AddComponent<Zebra>();
+                    GameObject zebraObject = new GameObject();
+                    Zebra zebra = zebraObject.AddComponent<Zebra>();
 
-                    zebra.animal = animalaInfo.animals[1];
+                    zebra.species = zebraInfo.animalSpecies;
 
                     if (randomGender == 0)
                     {
-                        zebra.gender = animalaInfo.genders[randomGender];
-                        zebra.name = animalaInfo.maleNames[Random.Range(0, 3)];
+                        zebra.gender = zebraInfo.genders[randomGender];
+                        zebra.name = zebraInfo.maleNames[Random.Range(0, 5)];
                     }
 
                     else if (randomGender == 1)
                     {
-                        zebra.gender = animalaInfo.genders[randomGender];
-                        zebra.name = animalaInfo.femaleNames[Random.Range(0, 3)];
+                        zebra.gender = zebraInfo.genders[randomGender];
+                        zebra.name = zebraInfo.femaleNames[Random.Range(0, 5)];
                     }
 
-                    zebra.age = animalaInfo.startAge;
+                    SpriteRenderer spriteRenderer = zebra.gameObject.AddComponent<SpriteRenderer>();
+                    zebra.sprite = zebraInfo.sprite;
+                    spriteRenderer.sprite = zebra.sprite;
+
+                    zebra.maxAge = zebraInfo.maxAge;
+                    zebra.age = zebraInfo.startAge;
                     break;
                 }
 
+            //2 Spawn apa
             case 2:
                 {
                     GameObject apaObject = new GameObject();
                     Apa apa = apaObject.AddComponent<Apa>();
 
-                    apa.animal = animalaInfo.animals[2];
+                    apa.species = apaInfo.animalSpecies;
 
                     if (randomGender == 0)
                     {
-                        apa.gender = animalaInfo.genders[randomGender];
-                        apa.name = animalaInfo.maleNames[Random.Range(0, 3)];
+                        apa.gender = apaInfo.genders[randomGender];
+                        apa.name = apaInfo.maleNames[Random.Range(0, 5)];
                     }
 
                     else if (randomGender == 1)
                     {
-                        apa.gender = animalaInfo.genders[randomGender];
-                        apa.name = animalaInfo.femaleNames[Random.Range(0, 3)];
+                        apa.gender = apaInfo.genders[randomGender];
+                        apa.name = apaInfo.femaleNames[Random.Range(0, 5)];
                     }
 
-                    apa.age = animalaInfo.startAge;
+                    SpriteRenderer spriteRenderer = apa.gameObject.AddComponent<SpriteRenderer>();
+                    apa.sprite = apaInfo.sprite;
+                    spriteRenderer.sprite = apa.sprite;
+
+                    apa.maxAge = apaInfo.maxAge;
+                    apa.age = apaInfo.startAge;
                     break;
                 }
 
