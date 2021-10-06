@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1c96b0466af254b98ead5c31ae782f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apaInfo: {fileID: 11400000, guid: 6634ad8586e1d974e8fdc5e90b0e428e, type: 2}
+  animalaInfo: {fileID: 11400000, guid: e2e730cb2d32a5a418c0f41f65d4b397, type: 2}
 --- !u!4 &551946188
 Transform:
   m_ObjectHideFlags: 0

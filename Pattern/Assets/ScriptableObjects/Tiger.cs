@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Apa : MonoBehaviour
+public class Tiger : MonoBehaviour
 {
     public string animal;
     public string name;
